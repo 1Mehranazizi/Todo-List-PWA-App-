@@ -23,7 +23,8 @@ const App = () => {
   }, [todos]);
 
   return (
-    <div>
+    <div className="container">
+      <h1 className="heading">Todo List</h1>
       <TodoInput
         todo={todo}
         setTodo={setTodo}
