@@ -13,6 +13,19 @@ interface Props {
 }
 
 const TodoItem: React.FC<Props> = ({ todo, setTodos, todos }) => {
+  const deletHandler = (id: number) => {
+    const newTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(newTodos);
+  };
+
+  const doneHandler = (id: number) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, isDone: !todo.isDone } : todo
+      )
+    );
+  };
+
   return (
     <li
       className={
@@ -23,10 +36,10 @@ const TodoItem: React.FC<Props> = ({ todo, setTodos, todos }) => {
     >
       <p>{todo.todo}</p>
       <div>
-        <span className={styles.todo_btn}>
+        <span className={styles.todo_btn} onClick={() => doneHandler(todo.id)}>
           <img src={CheckIcon} alt="checked" />
         </span>
-        <span className={styles.todo_btn}>
+        <span className={styles.todo_btn} onClick={() => deletHandler(todo.id)}>
           <img src={TrashIcon} alt="trash" />
         </span>
       </div>
