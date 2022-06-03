@@ -1,0 +1,41 @@
+.heading {
+    color: #666;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  .todoInput {
+    position: relative;
+    width: 400px;
+    margin: 2rem auto;
+    padding: 6px 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .todoInput input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 8px 0;
+    color: #666;
+    font-size: 1rem;
+  }
+  
+  .btn__todo_input {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    border: none;
+    background-color: royalblue;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  @media(max-width:600px) {
+    .todoInput {
+      width: 350px;
+    }
+  }
