@@ -1,3 +1,3 @@
 # Todo-List-PWA-App-
-Show Demo https://exquisite-buttercream-02d846.netlify.app/ 
+ Show Demo https://exquisite-buttercream-02d846.netlify.app/ 
  Build a todo list using React TypeScript
